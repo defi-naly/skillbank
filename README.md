@@ -2,7 +2,7 @@
 
 Book and framework skills for Claude Code agents. Each skill encodes mental models, frameworks, and principles from influential books.
 
-## Skills (22 books)
+## Skills (25 books)
 
 ### Psychology & Decision-Making
 - **thinking-fast-and-slow** - Kahneman's cognitive biases and System 1/2 thinking
@@ -23,6 +23,11 @@ Book and framework skills for Claude Code agents. Each skill encodes mental mode
 ### Strategy
 - **playing-to-win** - Lafley & Martin's strategy cascade
 - **good-strategy-bad-strategy** - Rumelt's strategy kernel
+
+### Network Effects & Platforms
+- **networks-crowds-markets** - Easley & Kleinberg on network science and collective dynamics
+- **cold-start-problem** - Andrew Chen on launching and scaling network effects
+- **modern-monopolies** - Moazed & Johnson on platform business models
 
 ### Taleb's Incerto
 - **antifragile** - Building systems that gain from disorder
