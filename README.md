@@ -1,76 +1,97 @@
 # Skillbank
 
-Book and framework skills for Claude Code agents. Each skill encodes mental models, frameworks, and principles from influential books.
+Actionable skills for Claude Code agents, synthesized from 25 books. Organized by use case, not by source material.
 
-## Skills (25 books)
+## Skills (31 skills across 6 categories)
 
-### Psychology & Decision-Making
-- **thinking-fast-and-slow** - Kahneman's cognitive biases and System 1/2 thinking
-- **think-again** - Adam Grant on intellectual humility and rethinking
-- **hidden-potential** - Adam Grant on character skills and growth
-- **thinking-in-systems** - Donella Meadows on systems thinking and feedback loops
+### Strategy (6 skills)
+Competitive positioning, risk, systems thinking, and decision-making.
 
-### Interpersonal & Negotiation
-- **how-to-win-friends** - Dale Carnegie's influence principles
-- **never-split-the-difference** - Chris Voss FBI negotiation tactics
+| Skill | Use When |
+|-------|----------|
+| `competitive-positioning` | Defining and defending a unique market position |
+| `risk-under-uncertainty` | Evaluating risk and building antifragile systems |
+| `systems-thinking` | Mapping feedback loops and finding leverage points |
+| `decision-frameworks` | Overcoming cognitive biases with structured processes |
+| `strategic-diagnosis` | Diagnosing the real problem before jumping to solutions |
+| `optionality` | Designing strategies with convex payoffs and flexibility |
 
-### Startup & Entrepreneurship
-- **lean-startup** - Eric Ries's build-measure-learn methodology
-- **founders-at-work** - Jessica Livingston's startup founder patterns
-- **hard-thing-about-hard-things** - Ben Horowitz on crisis leadership
-- **zero-to-one** - Peter Thiel on building new things
+### Product (6 skills)
+Idea validation, iteration, network effects, and platform design.
 
-### Strategy
-- **playing-to-win** - Lafley & Martin's strategy cascade
-- **good-strategy-bad-strategy** - Rumelt's strategy kernel
+| Skill | Use When |
+|-------|----------|
+| `idea-validation` | Finding 0→1 opportunities and validating before building |
+| `mvp-iteration` | Running build-measure-learn cycles and rapid iteration |
+| `network-effects` | Designing, launching, and scaling network-effect products |
+| `platform-design` | Building multi-sided platforms and marketplaces |
+| `founder-playbook` | Applying patterns and avoiding pitfalls from successful founders |
+| `pricing-monetization` | Pricing products and monetizing platforms |
 
-### Network Effects & Platforms
-- **networks-crowds-markets** - Easley & Kleinberg on network science and collective dynamics
-- **cold-start-problem** - Andrew Chen on launching and scaling network effects
-- **modern-monopolies** - Moazed & Johnson on platform business models
+### Marketing (6 skills)
+Negotiation, persuasion, growth, positioning, and storytelling.
 
-### Taleb's Incerto
-- **antifragile** - Building systems that gain from disorder
-- **black-swan** - Navigating extreme uncertainty
-- **skin-in-the-game** - Evaluating trust and designing incentives
+| Skill | Use When |
+|-------|----------|
+| `negotiation` | Closing deals and handling objections with tactical empathy |
+| `persuasion` | Winning people over through genuine connection |
+| `growth-loops` | Designing viral loops and self-sustaining growth engines |
+| `positioning-messaging` | Crafting positioning and narrative that differentiates |
+| `community-building` | Building community that drives retention and organic growth |
+| `storytelling` | Telling compelling stories for marketing and sales |
 
-### Wealth & Economics
-- **almanack-of-naval** - Naval Ravikant on wealth creation and happiness
-- **broken-money** - Lyn Alden on monetary systems and hard money
-- **technofeudalism** - Varoufakis on platform economics
+### Leadership (6 skills)
+Crisis management, hiring, personal development, and creativity.
 
-### Macro & Society
-- **fourth-turning** - Strauss-Howe generational theory
-- **sovereign-individual** - Davidson & Rees-Mogg on digital autonomy
+| Skill | Use When |
+|-------|----------|
+| `crisis-leadership` | Leading through crises and making hard calls |
+| `hiring-culture` | Building teams, hiring well, and scaling culture |
+| `personal-leverage` | Building wealth through leverage, not time-for-money |
+| `creative-process` | Breaking through creative blocks and shipping authentic work |
+| `intellectual-humility` | Rethinking assumptions and fostering productive disagreement |
+| `talent-development` | Developing potential through character skills and feedback |
 
-### Creativity
-- **creative-act** - Rick Rubin on the creative process
+### Economics (5 skills)
+Monetary systems, macro cycles, sovereignty, and platform power.
 
-### Technical
-- **understanding-deep-learning** - Simon Prince's ML/AI framework
+| Skill | Use When |
+|-------|----------|
+| `monetary-systems` | Understanding money, fiat dysfunction, and hard money |
+| `macro-cycles` | Navigating generational cycles and institutional decay |
+| `digital-sovereignty` | Planning for individual autonomy and crypto implications |
+| `platform-power` | Understanding platform rent extraction and escape strategies |
+| `geopolitical-positioning` | Navigating jurisdictions and regulatory environments |
 
-## Skill Schema
+### Development (2 skills)
+Code scaffolding and technical reference.
 
-Each skill uses an enhanced retrieval schema:
+| Skill | Use When |
+|-------|----------|
+| `repo-scaffold` | Scaffolding a pnpm + Turborepo monorepo with full tooling |
+| `deep-learning` | Building ML models, choosing architectures, debugging training |
 
-```yaml
-dimensions:        # Multi-dimensional categorization
-  domain: [...]    # What field/area
-  phase: [...]     # When in the process
-  problem_type: [...] # What kind of problem
+## Source Material
 
-contexts:          # Conditional routing
-  - situation: "..."
-    use_when: "..."
+Original book skills are preserved in `_sources/` for reference. Each synthesized skill draws from multiple books — see the skill file for attribution.
 
-combines_with:     # Complementary skills
-  - skill-name
+### Books (25)
 
-contrast_with:     # Discriminative distinctions
-  - skill: other-skill
-    distinction: "..."
-```
+Almanack of Naval, Antifragile, Black Swan, Broken Money, Cold Start Problem, Creative Act, Founders at Work, Fourth Turning, Good Strategy Bad Strategy, Hard Thing About Hard Things, Hidden Potential, How to Win Friends, Lean Startup, Modern Monopolies, Networks Crowds Markets, Never Split the Difference, Playing to Win, Skin in the Game, Sovereign Individual, Technofeudalism, Think Again, Thinking Fast and Slow, Thinking in Systems, Understanding Deep Learning, Zero to One
 
 ## Usage
 
-Reference skills in your Claude Code projects via `.claude/settings.json` or import directly.
+Reference skills in your Claude Code projects via `.claude/settings.json`:
+
+```json
+{
+  "skills": ["github:defi-naly/skillbank/strategy/competitive-positioning.md"]
+}
+```
+
+Or install all skills in a category:
+
+```bash
+# Copy a category into your project
+cp -r strategy/ /your-project/.claude/skills/strategy/
+```
