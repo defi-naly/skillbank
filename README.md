@@ -2,7 +2,7 @@
 
 Actionable skills for Claude Code agents, synthesized from books and practitioner playbooks. Organized by use case, not by source material.
 
-## Skills (61 skills across 6 categories)
+## Skills (63 skills across 6 categories)
 
 ### Strategy (6 skills)
 Competitive positioning, risk, systems thinking, and decision-making.
@@ -92,14 +92,23 @@ Monetary systems, macro cycles, sovereignty, and platform power.
 | `platform-power` | Understanding platform rent extraction and escape strategies |
 | `geopolitical-positioning` | Navigating jurisdictions and regulatory environments |
 
-### Development (3 skills)
-Code scaffolding, technical reference, and frontend design.
+### Development (5 skills)
+Code scaffolding, technical reference, frontend design, data visualization, and market research pages.
+
+#### Frontend
+
+| Skill | Use When |
+|-------|----------|
+| `frontend-design` | Building distinctive, production-grade frontend interfaces |
+| `shadcn-charts` | Adding charts, dashboards, KPI widgets, and data visualization with shadcn/ui + Recharts |
+| `market-research-page` | Building a data-rich, interactive market research site with charts, TAM/SAM/SOM, competitive landscape, and revenue projections |
+
+#### Backend
 
 | Skill | Use When |
 |-------|----------|
 | `repo-scaffold` | Scaffolding a pnpm + Turborepo monorepo with full tooling |
 | `deep-learning` | Building ML models, choosing architectures, debugging training |
-| `frontend-design` | Building distinctive, production-grade frontend interfaces |
 
 ## Source Material
 
@@ -113,6 +122,7 @@ Almanack of Naval, Antifragile, Black Swan, Broken Money, Cold Start Problem, Cr
 
 - **Marketing skills** (29 skills) — [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills). Practitioner playbooks for CRO, SEO, paid ads, email, copywriting, and conversion optimization.
 - **Frontend design skill** — [anthropics/skills](https://github.com/anthropics/skills). Anthropic's official frontend design skill for building distinctive, production-grade interfaces.
+- **shadcn charts** — [shadcn/ui charts](https://ui.shadcn.com/charts). shadcn/ui chart components built on Recharts for production-ready data visualization.
 
 ## Usage
 
@@ -120,7 +130,7 @@ Reference skills in your Claude Code projects via `.claude/settings.json`:
 
 ```json
 {
-  "skills": ["github:defi-naly/skillbank/strategy/competitive-positioning.md"]
+  "skills": ["github:defi-naly/skillbank/development/frontend/shadcn-charts/SKILL.md"]
 }
 ```
 
