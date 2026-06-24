@@ -2,7 +2,7 @@
 
 Actionable skills for Claude Code agents, synthesized from books and practitioner playbooks. Organized by use case, not by source material.
 
-## Skills (63 skills across 6 categories)
+## Skills (96 skills across 6 categories)
 
 ### Strategy (6 skills)
 Competitive positioning, risk, systems thinking, and decision-making.
@@ -28,8 +28,8 @@ Idea validation, iteration, network effects, and platform design.
 | `founder-playbook` | Applying patterns and avoiding pitfalls from successful founders |
 | `pricing-monetization` | Pricing products and monetizing platforms |
 
-### Marketing (35 skills)
-Negotiation, persuasion, growth, positioning, storytelling, CRO, SEO, paid ads, email, and conversion optimization.
+### Marketing (39 skills)
+Negotiation, persuasion, growth, positioning, storytelling, CRO, SEO, paid ads, email, long-form writing, and conversion optimization.
 
 | Skill | Use When |
 |-------|----------|
@@ -44,6 +44,7 @@ Negotiation, persuasion, growth, positioning, storytelling, CRO, SEO, paid ads, 
 | `content-strategy` | Planning content strategy, topics, and editorial direction |
 | `copy-editing` | Editing, reviewing, or improving existing marketing copy |
 | `copywriting` | Writing or rewriting marketing copy for any page type |
+| `edit-article` | Editing and improving an existing article, restructuring and tightening prose |
 | `email-sequence` | Creating or optimizing email sequences and drip campaigns |
 | `form-cro` | Optimizing lead capture, contact, and application forms |
 | `free-tool-strategy` | Planning or building free tools for lead gen and SEO |
@@ -68,9 +69,12 @@ Negotiation, persuasion, growth, positioning, storytelling, CRO, SEO, paid ads, 
 | `signup-flow-cro` | Optimizing signup, registration, and trial activation flows |
 | `social-content` | Creating and optimizing social media content across platforms |
 | `storytelling` | Telling compelling stories for marketing and sales |
+| `writing-beats` | Shaping an article as a journey of beats, written one beat at a time |
+| `writing-fragments` | Mining raw fragments (claims, vignettes, sharp lines) and assembling them into a piece |
+| `writing-shape` | Shaping a markdown file of raw material into a finished article through conversation |
 
-### Leadership (6 skills)
-Crisis management, hiring, personal development, and creativity.
+### Leadership (7 skills)
+Crisis management, hiring, personal development, creativity, and teaching.
 
 | Skill | Use When |
 |-------|----------|
@@ -80,6 +84,7 @@ Crisis management, hiring, personal development, and creativity.
 | `creative-process` | Breaking through creative blocks and shipping authentic work |
 | `intellectual-humility` | Rethinking assumptions and fostering productive disagreement |
 | `talent-development` | Developing potential through character skills and feedback |
+| `teach` | Teaching the user a new skill or concept, hands-on within the workspace |
 
 ### Economics (5 skills)
 Monetary systems, macro cycles, sovereignty, and platform power.
@@ -92,8 +97,8 @@ Monetary systems, macro cycles, sovereignty, and platform power.
 | `platform-power` | Understanding platform rent extraction and escape strategies |
 | `geopolitical-positioning` | Navigating jurisdictions and regulatory environments |
 
-### Development (5 skills)
-Code scaffolding, technical reference, frontend design, data visualization, and market research pages.
+### Development (33 skills)
+Frontend and backend build skills, plus the engineering process, planning, and repo-setup workflow from the Matt Pocock skill set.
 
 #### Frontend
 
@@ -101,7 +106,6 @@ Code scaffolding, technical reference, frontend design, data visualization, and 
 |-------|----------|
 | `frontend-design` | Building distinctive, production-grade frontend interfaces |
 | `shadcn-charts` | Adding charts, dashboards, KPI widgets, and data visualization with shadcn/ui + Recharts |
-| `market-research-page` | Building a data-rich, interactive market research site with charts, TAM/SAM/SOM, competitive landscape, and revenue projections |
 
 #### Backend
 
@@ -109,6 +113,52 @@ Code scaffolding, technical reference, frontend design, data visualization, and 
 |-------|----------|
 | `repo-scaffold` | Scaffolding a pnpm + Turborepo monorepo with full tooling |
 | `deep-learning` | Building ML models, choosing architectures, debugging training |
+
+#### Process
+
+| Skill | Use When |
+|-------|----------|
+| `tdd` | Building features or fixing bugs test-first (red-green-refactor) |
+| `diagnosing-bugs` | Diagnosing hard bugs and performance regressions |
+| `codebase-design` | Designing or improving a module's interface and finding deepening opportunities |
+| `domain-modeling` | Pinning down domain terminology and building a project's domain model |
+| `implement` | Implementing a piece of work from a PRD or set of issues |
+| `review` | Reviewing changes against repo standards and code quality |
+| `prototype` | Building a throwaway prototype to flesh out a design |
+| `improve-codebase-architecture` | Scanning a codebase for deepening opportunities, reported visually |
+| `resolving-merge-conflicts` | Resolving an in-progress git merge or rebase conflict |
+| `migrate-to-shoehorn` | Replacing `as` assertions with @total-typescript/shoehorn in tests |
+| `design-an-interface` † | Exploring radically different API/interface designs with sub-agents |
+| `ubiquitous-language` † | Extracting a DDD glossary from the current conversation |
+| `request-refactor-plan` † | Planning a refactor as tiny commits, filed as an issue |
+| `qa` † | Filing GitHub issues from a conversational QA session |
+
+#### Workflow
+
+| Skill | Use When |
+|-------|----------|
+| `to-prd` | Turning the current conversation into a PRD on the issue tracker |
+| `to-issues` | Breaking a plan or PRD into independently-grabbable issues |
+| `triage` | Moving issues through a categorise → reproduce → brief state machine |
+| `decision-mapping` | Turning a loose idea into sequenced investigation tickets |
+| `handoff` | Compacting the conversation into a handoff doc for another agent |
+| `grill-me` | A relentless interview to sharpen a plan or design |
+| `grilling` | Stress-testing a plan before building (any 'grill' trigger) |
+| `grill-with-docs` | Grilling that also produces ADRs and a glossary as you go |
+| `ask-matt` | Routing to the right skill or flow for your situation |
+| `obsidian-vault` | Searching, creating, and managing Obsidian notes with wikilinks |
+
+#### Setup
+
+| Skill | Use When |
+|-------|----------|
+| `setup-matt-pocock-skills` | Configuring a repo for these skills (issue tracker, labels, docs) — run once |
+| `setup-pre-commit` | Adding Husky pre-commit hooks (Prettier, type-checking, tests) |
+| `git-guardrails-claude-code` | Blocking dangerous git commands via Claude Code hooks |
+| `scaffold-exercises` | Scaffolding exercise directories with problems, solutions, and explainers |
+| `writing-great-skills` | Reference for writing and editing Claude Code skills well |
+
+† Deprecated upstream, kept for completeness.
 
 ## Source Material
 
@@ -123,6 +173,7 @@ Almanack of Naval, Antifragile, Black Swan, Broken Money, Cold Start Problem, Cr
 - **Marketing skills** (29 skills) — [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills). Practitioner playbooks for CRO, SEO, paid ads, email, copywriting, and conversion optimization.
 - **Frontend design skill** — [anthropics/skills](https://github.com/anthropics/skills). Anthropic's official frontend design skill for building distinctive, production-grade interfaces.
 - **shadcn charts** — [shadcn/ui charts](https://ui.shadcn.com/charts). shadcn/ui chart components built on Recharts for production-ready data visualization.
+- **Engineering & workflow skills** (34 skills) — [mattpocock/skills](https://github.com/mattpocock/skills). Matt Pocock's engineering, planning, and writing skills for Claude Code: TDD, debugging, domain modeling, code review, issue/PRD workflows, repo setup, and long-form writing. Distributed across Development, Marketing, and Leadership.
 
 ## Usage
 
